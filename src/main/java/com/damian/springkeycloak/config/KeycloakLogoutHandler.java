@@ -2,6 +2,7 @@ package com.damian.springkeycloak.config;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import lombok.Setter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
@@ -12,6 +13,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
+@Setter
 @Component
 public class KeycloakLogoutHandler implements LogoutHandler {
 
@@ -44,7 +46,4 @@ public class KeycloakLogoutHandler implements LogoutHandler {
         }
     }
 
-    public void setRestTemplate(RestTemplate restTemplate) {
-        this.restTemplate = restTemplate;
-    }
 }
